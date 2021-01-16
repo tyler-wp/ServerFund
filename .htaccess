@@ -1,0 +1,15 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteRule ^p/([a-zA-Z0-9]+)$ p/index.php?panel=$1 [L]
+RewriteRule ^p/([a-zA-Z0-9]+)/store$ p/store.php?panel=$1 [L]
+RewriteRule ^user/ticket/(.+)$ user/view-ticket.php?t=$1 [L]
+RewriteRule ^p/([a-zA-Z0-9]+)/admin/settings$ p/settings.php?panel=$1 [L]
+RewriteRule ^p/([a-zA-Z0-9]+)/admin/packages$ p/packages.php?panel=$1 [L]
+RewriteRule ^p/([a-zA-Z0-9]+)/admin/page-editor$ p/page-editor.php?panel=$1 [L]
+RewriteRule ^p/([a-zA-Z0-9]+)/admin/orders$ p/orders.php [L]

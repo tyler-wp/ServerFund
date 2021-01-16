@@ -1,0 +1,2 @@
+1> backend/inc/config --> Host Url --> Your URL
+2> p/store --> "Paypal Email" --> Your Email
